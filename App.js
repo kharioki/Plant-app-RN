@@ -21,6 +21,4 @@ const App = () => {
   return <Home />;
 };
 
-const styles = StyleSheet.create({});
-
 export default App;
