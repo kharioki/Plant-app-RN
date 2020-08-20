@@ -1,17 +1,25 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, ScrollView} from 'react-native';
 import Header from '../components/home/Header';
+import ListCard from '../components/home/ListCard';
 
 export default function Home() {
   return (
-    <View style={styles.container}>
+    <ScrollView style={styles.container}>
       <Header />
-    </View>
+      <View style={styles.body}>
+        <ListCard title={'Recomended'} />
+        <ListCard title={'Featured Plants'} bigger />
+      </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+  },
+  body: {
+    marginTop: 40,
   },
 });
